@@ -1,9 +1,10 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.xiecai1234'
+version = '0.1.1'
 android {
     compileSdkVersion 28
-
-
 
     defaultConfig {
         minSdkVersion 21
@@ -31,4 +32,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+publish {
+    userOrg = 'xiecaibao1111'             // Binary用户名
+    repoName = 'work'          // Binary上的刚才新建的仓库名（Repository）
+    groupId = 'com.fingerbeat.cloud'        // 依赖名compile 'x:y:z '中的包名x
+    artifactId = 'utilcode'        // 依赖名compile 'x:y:z '中的项目名y
+    publishVersion = '0.0.1'          // 依赖名compile 'x:y:z '中的版本号z
+    desc = 'utilcode'            // 对该开源组件的说明
+    website = 'https://github.com/xiecai1234/utilcode'  // VCS地址，即填写项目上传的Github地址
 }
