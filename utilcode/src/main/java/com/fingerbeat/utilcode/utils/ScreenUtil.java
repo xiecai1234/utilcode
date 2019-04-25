@@ -9,7 +9,7 @@ import android.content.Context;
  */
 public class ScreenUtil {
     //返回值就是状态栏的高度,得到的值单位px
-    public float getStatusBarHeight(Context context) {
+    public static float getStatusBarHeight(Context context) {
         float result = 0;
         int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
         if (resourceId > 0) {
@@ -18,7 +18,7 @@ public class ScreenUtil {
         return result;
     }
     //返回值就是导航栏的高度,得到的值单位px
-    public float getNavigationBarHeight(Context context) {
+    public static float getNavigationBarHeight(Context context) {
         float result = 0;
         int resourceId = context.getResources().getIdentifier("navigation_bar_height", "dimen", "android");
         if (resourceId > 0) {
